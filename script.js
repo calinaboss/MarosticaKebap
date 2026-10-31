@@ -1,0 +1,110 @@
+document.addEventListener('DOMContentLoaded', () => {
+  
+  const yearEl = document.getElementById('currentYear');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !isExpanded);
+      navMenu.classList.toggle('open');
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        navToggle.setAttribute('aria-expanded', 'false');
+        navMenu.classList.remove('open');
+      });
+    });
+  }
+
+  const reviewsTrack = document.getElementById('reviewsTrack');
+  const sliderPrev = document.getElementById('sliderPrev');
+  const sliderNext = document.getElementById('sliderNext');
+
+  if (reviewsTrack && sliderPrev && sliderNext) {
+    const getScrollStep = () => {
+      const card = reviewsTrack.querySelector('.review-card');
+      if (card) {
+        
+        return card.offsetWidth + 20;
+      }
+      return 340;
+    };
+
+    sliderPrev.addEventListener('click', () => {
+      reviewsTrack.scrollBy({
+        left: -getScrollStep(),
+        behavior: 'smooth'
+      });
+    });
+
+    sliderNext.addEventListener('click', () => {
+      reviewsTrack.scrollBy({
+        left: getScrollStep(),
+        behavior: 'smooth'
+      });
+    });
+
+    reviewsTrack.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        reviewsTrack.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
+      } else if (e.key === 'ArrowRight') {
+        reviewsTrack.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
+      }
+    });
+  }
+
+  const privacyModal = document.getElementById('privacyModal');
+  const openPrivacyBtn = document.getElementById('openPrivacyBtn');
+  const closePrivacyBtn = document.getElementById('closePrivacyBtn');
+  const confirmPrivacyBtn = document.getElementById('confirmPrivacyBtn');
+
+  const openModal = () => {
+    if (privacyModal) {
+      privacyModal.classList.add('active');
+      privacyModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const closeModal = () => {
+    if (privacyModal) {
+      privacyModal.classList.remove('active');
+      privacyModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  };
+
+  if (openPrivacyBtn) {
+    openPrivacyBtn.addEventListener('click', openModal);
+  }
+
+  if (closePrivacyBtn) {
+    closePrivacyBtn.addEventListener('click', closeModal);
+  }
+
+  if (confirmPrivacyBtn) {
+    confirmPrivacyBtn.addEventListener('click', closeModal);
+  }
+
+  if (privacyModal) {
+    privacyModal.addEventListener('click', (e) => {
+      if (e.target === privacyModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && privacyModal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+});
