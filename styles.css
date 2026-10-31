@@ -970,3 +970,45 @@ img {
     font-size: 1.3rem;
   }
 }
+.page-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background-color: #3a080f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.85s cubic-bezier(0.77, 0, 0.175, 1);
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+.curtain-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: curtainLogoAnim 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+}
+
+.curtain-logo {
+  max-width: 320px;
+  width: 70vw;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 36px rgba(0, 0, 0, 0.55));
+}
+
+@keyframes curtainLogoAnim {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page-curtain.slide-left {
+  transform: translateX(-100%);
+  pointer-events: none;
+}

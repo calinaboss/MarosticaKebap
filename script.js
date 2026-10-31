@@ -107,4 +107,23 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  const curtain = document.getElementById('pageCurtain');
+  if (curtain) {
+    const triggerCurtainExit = () => {
+      setTimeout(() => {
+        curtain.classList.add('slide-left');
+        setTimeout(() => {
+          curtain.style.display = 'none';
+        }, 900);
+      }, 700);
+    };
+
+    if (document.readyState === 'complete') {
+      triggerCurtainExit();
+    } else {
+      window.addEventListener('load', triggerCurtainExit);
+      setTimeout(triggerCurtainExit, 1600);
+    }
+  }
 });
