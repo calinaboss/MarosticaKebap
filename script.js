@@ -157,25 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  const menuTabs = document.querySelectorAll('.menu-tab-btn');
-  if (menuTabs.length > 0) {
-    const handleTabHighlight = () => {
-      const sections = ['pide', 'kebap', 'specialita', 'pizze', 'dolci'];
-      const scrollPos = window.scrollY + 140;
-
-      sections.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
-            menuTabs.forEach(t => {
-              if (t.getAttribute('href') === `#${id}`) {
-                t.classList.add('active');
-              } else {
-                t.classList.remove('active');
-              }
             });
           }
         }
