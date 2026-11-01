@@ -111,25 +111,27 @@ document.addEventListener('DOMContentLoaded', () => {
   if (curtain) {
     const triggerCurtainExit = () => {
       setTimeout(() => {
+        curtain.classList.remove('from-right');
+        curtain.classList.remove('cover-screen');
         curtain.classList.add('slide-left');
         setTimeout(() => {
           curtain.style.display = 'none';
-        }, 850);
-      }, 400);
+        }, 700);
+      }, 300);
     };
 
     if (document.readyState === 'complete') {
       triggerCurtainExit();
     } else {
       window.addEventListener('load', triggerCurtainExit);
-      setTimeout(triggerCurtainExit, 1000);
+      setTimeout(triggerCurtainExit, 900);
     }
 
     curtain.addEventListener('click', () => {
       curtain.classList.add('slide-left');
       setTimeout(() => {
         curtain.style.display = 'none';
-      }, 850);
+      }, 700);
     });
 
     window.addEventListener('pageshow', (e) => {
@@ -153,13 +155,18 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', (e) => {
               e.preventDefault();
               const targetUrl = link.href;
+              curtain.classList.remove('slide-left');
+              curtain.classList.add('from-right');
               curtain.style.display = 'flex';
               requestAnimationFrame(() => {
-                curtain.classList.remove('slide-left');
+                requestAnimationFrame(() => {
+                  curtain.classList.remove('from-right');
+                  curtain.classList.add('cover-screen');
+                });
               });
               setTimeout(() => {
                 window.location.href = targetUrl;
-              }, 500);
+              }, 480);
             });
           }
         }

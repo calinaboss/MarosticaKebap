@@ -836,7 +836,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.75s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.75s ease;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.65s cubic-bezier(0.77, 0, 0.175, 1);
   pointer-events: auto;
   overflow: hidden;
 }
@@ -868,8 +869,18 @@ html, body {
 
 .page-curtain.slide-left {
   transform: translate3d(-100%, 0, 0);
-  opacity: 0;
   pointer-events: none;
+}
+
+.page-curtain.from-right {
+  transform: translate3d(100%, 0, 0);
+  transition: none;
+}
+
+.page-curtain.cover-screen {
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.48s cubic-bezier(0.77, 0, 0.175, 1);
+  pointer-events: auto;
 }
 
 @media (max-width: 900px) {
