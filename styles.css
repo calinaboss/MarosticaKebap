@@ -885,21 +885,42 @@ html, body {
 
 @media (max-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
     text-align: center;
   }
 
   .hero-left {
+    display: contents;
     text-align: center;
   }
 
-  .hero-subtitle {
-    margin-left: auto;
-    margin-right: auto;
+  .hero-title {
+    order: 1;
+    margin-bottom: 0;
   }
 
   .hero-right {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0 12px;
+  }
+
+  .hero-subtitle {
+    order: 3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  .hero-actions {
+    order: 4;
+    margin-top: 18px;
+    width: 100%;
     justify-content: center;
   }
 
@@ -960,12 +981,15 @@ html, body {
   }
 
   .hero-logo-box {
-    max-width: 170px;
+    max-width: 260px;
+    width: 72vw;
     margin: 0 auto;
   }
 
   .hero-logo-img {
-    max-height: 140px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
   }
 
   .nav-menu {
@@ -1155,11 +1179,12 @@ html, body {
   }
 
   .hero-logo-box {
-    max-width: 140px;
+    max-width: 220px;
+    width: 70vw;
   }
 
   .hero-logo-img {
-    max-height: 120px;
+    max-height: 175px;
   }
 
   .review-card {
@@ -1175,6 +1200,22 @@ html, body {
   .map-frame-inner iframe {
     min-height: 230px;
   }
+}
+
+.btn-menu-outline {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.btn-menu-outline:hover {
+  background: #ffffff;
+  color: var(--bg-bordeaux-base);
+  border-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.32);
 }
 
 .btn-whatsapp {
