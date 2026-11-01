@@ -114,22 +114,56 @@ document.addEventListener('DOMContentLoaded', () => {
         curtain.classList.add('slide-left');
         setTimeout(() => {
           curtain.style.display = 'none';
-        }, 900);
-      }, 500);
+        }, 850);
+      }, 400);
     };
 
     if (document.readyState === 'complete') {
       triggerCurtainExit();
     } else {
       window.addEventListener('load', triggerCurtainExit);
-      setTimeout(triggerCurtainExit, 1200);
+      setTimeout(triggerCurtainExit, 1000);
     }
 
     curtain.addEventListener('click', () => {
       curtain.classList.add('slide-left');
       setTimeout(() => {
         curtain.style.display = 'none';
-      }, 900);
+      }, 850);
+    });
+
+    window.addEventListener('pageshow', (e) => {
+      if (e.persisted) {
+        triggerCurtainExit();
+      }
+    });
+
+    const pageLinks = document.querySelectorAll('a[href]');
+    pageLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('tel:') || href.startsWith('mailto:') || href.includes('wa.me') || link.target === '_blank') {
+        return;
+      }
+
+      try {
+        const url = new URL(link.href, window.location.href);
+        if (url.origin === window.location.origin) {
+          const isSamePage = url.pathname === window.location.pathname;
+          if (!isSamePage) {
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              const targetUrl = link.href;
+              curtain.style.display = 'flex';
+              requestAnimationFrame(() => {
+                curtain.classList.remove('slide-left');
+              });
+              setTimeout(() => {
+                window.location.href = targetUrl;
+              }, 500);
+            });
+          }
+        }
+      } catch (err) {}
     });
   }
 
