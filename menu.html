@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menù Tradizionale | Istanbul City Kebap Marostica</title>
+
+  <meta name="description" content="Scopri il menù di Istanbul City Kebap Marostica: pide turche artigianali, autentico döner kebap, lahmacun, tacos francesi, pizze calde e baklava. Ordina subito via WhatsApp o telefono." />
+  <meta name="keywords" content="Menù Marostica Kebap, pide turche Marostica, döner kebap Marostica, lahmacun, tacos francesi Marostica, pizza kebap, baklava Marostica" />
+  <meta name="author" content="Istanbul City Kebap Marostica" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://marosticakebap.it/menu.html" />
+
+  <meta property="og:type" content="restaurant.menu" />
+  <meta property="og:site_name" content="Istanbul City Kebap Marostica" />
+  <meta property="og:title" content="Menù | Istanbul City Kebap Marostica" />
+  <meta property="og:description" content="Pide turche, döner kebap, lahmacun, tacos francesi e dolci artigianali a Marostica. Ordina da asporto su WhatsApp o telefono." />
+  <meta property="og:url" content="https://marosticakebap.it/menu.html" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/calinaboss/MarosticaKebap/main/assets/og-image.jpg" />
+  <meta property="og:locale" content="it_IT" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Menù | Istanbul City Kebap Marostica" />
+  <meta name="twitter:description" content="Pide turche, döner kebap, lahmacun, tacos francesi e dolci artigianali a Marostica." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/calinaboss/MarosticaKebap/main/assets/og-image.jpg" />
+
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+  <meta name="theme-color" content="#3a080f" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css?v=2.2" />
+</head>
+<body class="menu-page">
+
+  <header class="site-header" id="top">
+    <div class="header-container">
+      <a href="index.html" class="brand-link" aria-label="Torna alla Home">
+        <img src="Brand/Logosenzasfondo-trimmed.webp" alt="Istanbul City Kebap Marostica Logo" class="brand-logo" />
+        <span class="brand-name">Istanbul City Kebap Marostica</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#pide" class="nav-link">Pide Turche</a>
+        <a href="#kebap" class="nav-link">Döner Kebap</a>
+        <a href="#specialita" class="nav-link">Lahmacun & Tacos</a>
+        <a href="#pizze" class="nav-link">Pizze</a>
+        <a href="#dolci" class="nav-link">Dolci</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20dal%20menù" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm header-cta">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.07 7.7C8.9 7.7 8.63 7.76 8.39 8.02C8.16 8.28 7.5 8.9 7.5 10.15C7.5 11.4 8.41 12.61 8.54 12.78C8.67 12.95 10.32 15.5 12.85 16.59C13.45 16.85 13.92 17 14.28 17.12C14.88 17.31 15.43 17.28 15.86 17.22C16.34 17.15 17.34 16.61 17.55 16.03C17.75 15.44 17.75 14.94 17.69 14.84C17.63 14.73 17.46 14.67 17.21 14.54C16.96 14.42 15.73 13.81 15.5 13.73C15.28 13.64 15.11 13.6 14.95 13.85C14.78 14.1 14.31 14.67 14.17 14.84C14.03 15 13.89 15.02 13.64 14.89C13.39 14.77 12.58 14.5 11.62 13.65C10.88 12.99 10.37 12.17 10.23 11.92C10.09 11.67 10.21 11.53 10.34 11.41C10.45 11.3 10.59 11.12 10.72 10.97C10.84 10.82 10.88 10.72 10.97 10.55C11.05 10.38 11.01 10.24 10.95 10.11C10.88 9.99 10.37 8.74 10.16 8.23C9.96 7.74 9.75 7.81 9.6 7.8C9.45 7.8 9.28 7.79 9.07 7.7Z"/>
+          </svg>
+          <span>Ordina WhatsApp</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Apri menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu-hero-section">
+      <div class="container text-center">
+        <span class="menu-badge-pill">Cucina Tradizionale Turca</span>
+        <h1 class="menu-hero-title">I Nostri Piatti Principali</h1>
+        <p class="menu-hero-subtitle">
+          Ingredienti freschi, carni marinate secondo tradizione, pide sfornate al momento e dolci artigianali. Sfoglia le foto e ordina direttamente.
+        </p>
+
+        <div class="menu-fast-order-box">
+          <span class="fast-order-label">Ordina subito per asporto o consumo veloce:</span>
+          <div class="fast-order-buttons">
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20dal%20menù" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.07 7.7C8.9 7.7 8.63 7.76 8.39 8.02C8.16 8.28 7.5 8.9 7.5 10.15C7.5 11.4 8.41 12.61 8.54 12.78C8.67 12.95 10.32 15.5 12.85 16.59C13.45 16.85 13.92 17 14.28 17.12C14.88 17.31 15.43 17.28 15.86 17.22C16.34 17.15 17.34 16.61 17.55 16.03C17.75 15.44 17.75 14.94 17.69 14.84C17.63 14.73 17.46 14.67 17.21 14.54C16.96 14.42 15.73 13.81 15.5 13.73C15.28 13.64 15.11 13.6 14.95 13.85C14.78 14.1 14.31 14.67 14.17 14.84C14.03 15 13.89 15.02 13.64 14.89C13.39 14.77 12.58 14.5 11.62 13.65C10.88 12.99 10.37 12.17 10.23 11.92C10.09 11.67 10.21 11.53 10.34 11.41C10.45 11.3 10.59 11.12 10.72 10.97C10.84 10.82 10.88 10.72 10.97 10.55C11.05 10.38 11.01 10.24 10.95 10.11C10.88 9.99 10.37 8.74 10.16 8.23C9.96 7.74 9.75 7.81 9.6 7.8C9.45 7.8 9.28 7.79 9.07 7.7Z"/>
+              </svg>
+              <span>WhatsApp Titolare (+39 392 4730825)</span>
+            </a>
+            <a href="tel:+393932721320" class="btn btn-call">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <span>Chiama Locale (+39 393 2721320)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="menu-sticky-nav-bar">
+      <div class="container menu-nav-scroll-wrap">
+        <a href="#pide" class="menu-tab-btn active">Pide Turche</a>
+        <a href="#kebap" class="menu-tab-btn">Döner Kebap</a>
+        <a href="#specialita" class="menu-tab-btn">Lahmacun & Tacos</a>
+        <a href="#pizze" class="menu-tab-btn">Pizze & Calzoni</a>
+        <a href="#dolci" class="menu-tab-btn">Dolci & Sfiziosità</a>
+      </div>
+    </div>
+
+        <section class="section menu-section-block" id="pide">
+      <div class="container">
+        <div class="menu-section-header">
+          <div>
+            <span class="section-tag-label">Specialità al Forno</span>
+            <h2 class="section-title">Pide Turche Tradizionali</h2>
+            <p class="section-subtitle">
+              La tipica pizza a barchetta della tradizione anatolica, con impasto a lenta lievitazione e farciture generose. Scorri tra le foto per scoprire i gusti.
+            </p>
+          </div>
+          <div class="menu-slider-arrows">
+            <button class="slider-arrow arrow-dish-prev" data-target="slider-pide" aria-label="Precedente">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="slider-arrow arrow-dish-next" data-target="slider-pide" aria-label="Successivo">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dishes-slider-track" id="slider-pide">
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Pide Kıymalı</h3>
+              <span class="dish-badge">Tradizionale</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto1.jpg" alt="Pide Kıymalı" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Carne macinata speziata con pomodoro fresco, cipolla dolce e spezie anatoliche su morbida pasta dorata.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Pide%20K%C4%B1ymal%C4%B1" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Pide Kaşarlı & Sucuk</h3>
+              <span class="dish-badge">Consigliata</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto2.jpg" alt="Pide Kaşarlı & Sucuk" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Formaggio filante turco kaşar e salsiccia speziata sucuk tagliata a rondelle e gratinata al forno.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Pide%20Ka%C5%9Farl%C4%B1%20e%20Sucuk" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Pide Mista Istanbul</h3>
+              <span class="dish-badge">Speciale</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto3.jpg" alt="Pide Mista Istanbul" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Ricca farcitura con sfoglie di carne döner kebap, formaggio fuso, pomodoro e peperoni dolci.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Pide%20Mista%20Istanbul" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Pide Vegetariana con Feta</h3>
+              <span class="dish-badge">Vegetariana</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto4.jpg" alt="Pide Vegetariana con Feta" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Formaggio bianco tipo feta, spinaci delicati, pomodorini e olio extravergine d'oliva.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Pide%20Vegetariana" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="section menu-section-block section-alt" id="kebap">
+      <div class="container">
+        <div class="menu-section-header">
+          <div>
+            <span class="section-tag-label">Spiedo Artigianale</span>
+            <h2 class="section-title">Döner Kebap & Piatti</h2>
+            <p class="section-subtitle">
+              Carne speziata cotta lentamente allo spiedo verticale, servita in pane fatto in casa, piadina calda o piatto ricco.
+            </p>
+          </div>
+          <div class="menu-slider-arrows">
+            <button class="slider-arrow arrow-dish-prev" data-target="slider-kebap" aria-label="Precedente">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="slider-arrow arrow-dish-next" data-target="slider-kebap" aria-label="Successivo">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dishes-slider-track" id="slider-kebap">
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Panino Kebap Tradizionale</h3>
+              <span class="dish-badge">Il Classico</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto5.jpg" alt="Panino Kebap Tradizionale" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Pane turco caldo e fragrante, carne kebap abbondante, insalata fresca, pomodoro, cipolla e salse della casa.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20Panino%20Kebap" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Dürüm Piadina Kebap</h3>
+              <span class="dish-badge">Più Richiesto</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto6.jpg" alt="Dürüm Piadina Kebap" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Sfoglia arrotolata e tostata al momento con carne tenera, verdure fresche croccanti e salsa yogurt piccante o delicata.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20D%C3%BCr%C3%BCm%20Piadina%20Kebap" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Piatto Kebap Completo</h3>
+              <span class="dish-badge">Porzione Ricca</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto7.jpg" alt="Piatto Kebap Completo" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Grande porzione di carne kebap servita con riso basmati aromatico, patatine dorate, insalata mista e focaccia calda.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20Piatto%20Kebap%20Completo" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Piatto Kebap con Feta & Olive</h3>
+              <span class="dish-badge">Gourmet</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto8.jpg" alt="Piatto Kebap con Feta" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Carne allo spiedo accompagnata da formaggio greco feta, olive nere, salsa tzatziki e pane artigianale tostato.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20Piatto%20Kebap%20con%20Feta" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Kebap Box con Patatine</h3>
+              <span class="dish-badge">Veloce & Sfizioso</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto9.jpg" alt="Kebap Box con Patatine" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Pratica scatola termica con strati di patatine croccanti e carne döner tagliata fine, affogata nelle tue salse preferite.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20Kebap%20Box" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="section menu-section-block" id="specialita">
+      <div class="container">
+        <div class="menu-section-header">
+          <div>
+            <span class="section-tag-label">I Sapori Iconici</span>
+            <h2 class="section-title">Lahmacun & French Tacos</h2>
+            <p class="section-subtitle">
+              Dal classico lahmacun sottile da arrotolare ai ricchi French Tacos grigliati con salsa calda al formaggio.
+            </p>
+          </div>
+          <div class="menu-slider-arrows">
+            <button class="slider-arrow arrow-dish-prev" data-target="slider-specialita" aria-label="Precedente">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="slider-arrow arrow-dish-next" data-target="slider-specialita" aria-label="Successivo">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dishes-slider-track" id="slider-specialita">
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Lahmacun Classico</h3>
+              <span class="dish-badge">Autentico</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto10.jpg" alt="Lahmacun Classico" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Sottilissima sfoglia croccante con trito di carne, pomodoro, prezzemolo e spezie; servito con limone fresco e insalata.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20Lahmacun%20Classico" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Lahmacun Kebap Arrotolato</h3>
+              <span class="dish-badge">Golosissimo</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto11.jpg" alt="Lahmacun Kebap Arrotolato" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Base di lahmacun farcita all'interno con carne döner kebap tagliata fresca, verdure croccanti e salsa allo yogurt.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20Lahmacun%20Kebap" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">French Tacos Singolo</h3>
+              <span class="dish-badge">Specialità Francese</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto12.jpg" alt="French Tacos Singolo" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Tortilla sigillata alla piastra con carne marinata, patatine fritte all'interno e la famosa salsa calda al formaggio.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20French%20Tacos%20Singolo" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">French Tacos Maxi Doppio</h3>
+              <span class="dish-badge">Super Ricco</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto13.jpg" alt="French Tacos Maxi Doppio" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Doppia porzione di carne a scelta, patatine dorate, doppia salsa ai formaggi e gratinatura esterna filante.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20French%20Tacos%20Maxi" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="section menu-section-block section-alt" id="pizze">
+      <div class="container">
+        <div class="menu-section-header">
+          <div>
+            <span class="section-tag-label">Alte e Croccanti</span>
+            <h2 class="section-title">Pizze al Forno & Calzoni</h2>
+            <p class="section-subtitle">
+              Pizze calde farcite con ingredienti di qualità, impasto leggero e ricette uniche che uniscono tradizione italiana e turca.
+            </p>
+          </div>
+          <div class="menu-slider-arrows">
+            <button class="slider-arrow arrow-dish-prev" data-target="slider-pizze" aria-label="Precedente">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="slider-arrow arrow-dish-next" data-target="slider-pizze" aria-label="Successivo">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dishes-slider-track" id="slider-pizze">
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Pizza Istanbul City</h3>
+              <span class="dish-badge">La Nostra Firma</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto14.jpg" alt="Pizza Istanbul City" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Pomodoro, mozzarella fiordilatte, carne kebap speziata abbondante, cipolla rossa e filo di salsa allo yogurt all'uscita.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Pizza%20Istanbul%20City" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Pizza con Sucuk Piccante</h3>
+              <span class="dish-badge">Piccante</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto15.jpg" alt="Pizza con Sucuk Piccante" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Base rossa, mozzarella filante, salsiccia turca speziata sucuk all'aglio e paprika dolce, peperoncino e origano.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Pizza%20con%20Sucuk" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Calzone Farcito Kebap</h3>
+              <span class="dish-badge">Al Forno</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto16.jpg" alt="Calzone Farcito Kebap" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Calzone dorato e fragrante ripieno di mozzarella filante, carne kebap allo spiedo e funghi champignon trifolati.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20il%20Calzone%20Kebap" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Pizza 4 Formaggi & Kebap</h3>
+              <span class="dish-badge">Saporita</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto17.jpg" alt="Pizza 4 Formaggi & Kebap" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Mozzarella, gorgonzola dop, fontina e parmigiano con straccetti di döner kebap rosolato al momento.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Pizza%204%20Formaggi%20e%20Kebap" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="section menu-section-block" id="dolci">
+      <div class="container">
+        <div class="menu-section-header">
+          <div>
+            <span class="section-tag-label">Per Concludere in Dolcezza</span>
+            <h2 class="section-title">Dolci Tradizionali & Contorni</h2>
+            <p class="section-subtitle">
+              Autentica baklava artigianale con sfoglie sottili e sciroppo profumato, falafel speziati e patatine calde.
+            </p>
+          </div>
+          <div class="menu-slider-arrows">
+            <button class="slider-arrow arrow-dish-prev" data-target="slider-dolci" aria-label="Precedente">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="slider-arrow arrow-dish-next" data-target="slider-dolci" aria-label="Successivo">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="dishes-slider-track" id="slider-dolci">
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Baklava al Pistacchio</h3>
+              <span class="dish-badge">Artigianale</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto18.jpg" alt="Baklava al Pistacchio" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Sottilissimi strati di pasta fillo burrosa ripieni di pistacchi di prima scelta e sciroppo dolce aromatizzato.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Baklava%20al%20Pistacchio" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Baklava alle Noci</h3>
+              <span class="dish-badge">Tradizionale</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto19.jpg" alt="Baklava alle Noci" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Il grande classico turco con noci tostate tritate a mano tra sfoglie dorate e croccanti al morso.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20la%20Baklava%20alle%20Noci" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="dish-card">
+            <div class="dish-card-header">
+              <h3 class="dish-title">Falafel Artigianali & Patatine</h3>
+              <span class="dish-badge">Vegetariano</span>
+            </div>
+            <div class="dish-image-box">
+              <img src="assets/foto20.jpg" alt="Falafel & Patatine" class="dish-img" loading="lazy" />
+            </div>
+            <p class="dish-desc">
+              Polpette di ceci speziate alle erbe fritte calde al momento, servite con salsa tahina e patatine croccanti.
+            </p>
+            <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20ordinare%20i%20Falafel%20e%20Patatine" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-dish-order">
+              <span>Ordina via WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="section menu-final-order-section">
+      <div class="container text-center">
+        <h2 class="section-title">Hai scelto cosa gustare?</h2>
+        <p class="section-subtitle">
+          Ordina subito via messaggio su WhatsApp o chiama il nostro locale per il ritiro immediato in Via Monte Grappa 51, Marostica.
+        </p>
+        <div class="menu-final-buttons">
+          <a href="https://wa.me/393924730825?text=Ciao%2C%20vorrei%20effettuare%20un%20ordine%20da%20asporto" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.04 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.07 7.7C8.9 7.7 8.63 7.76 8.39 8.02C8.16 8.28 7.5 8.9 7.5 10.15C7.5 11.4 8.41 12.61 8.54 12.78C8.67 12.95 10.32 15.5 12.85 16.59C13.45 16.85 13.92 17 14.28 17.12C14.88 17.31 15.43 17.28 15.86 17.22C16.34 17.15 17.34 16.61 17.55 16.03C17.75 15.44 17.75 14.94 17.69 14.84C17.63 14.73 17.46 14.67 17.21 14.54C16.96 14.42 15.73 13.81 15.5 13.73C15.28 13.64 15.11 13.6 14.95 13.85C14.78 14.1 14.31 14.67 14.17 14.84C14.03 15 13.89 15.02 13.64 14.89C13.39 14.77 12.58 14.5 11.62 13.65C10.88 12.99 10.37 12.17 10.23 11.92C10.09 11.67 10.21 11.53 10.34 11.41C10.45 11.3 10.59 11.12 10.72 10.97C10.84 10.82 10.88 10.72 10.97 10.55C11.05 10.38 11.01 10.24 10.95 10.11C10.88 9.99 10.37 8.74 10.16 8.23C9.96 7.74 9.75 7.81 9.6 7.8C9.45 7.8 9.28 7.79 9.07 7.7Z"/>
+            </svg>
+            <span>Scrivi su WhatsApp: +39 392 4730825</span>
+          </a>
+          <a href="tel:+393932721320" class="btn btn-call btn-lg">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>Chiama Locale: +39 393 2721320</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container text-center">
+      <p class="footer-copyright">&copy; <span id="currentYear"></span> Istanbul City Kebap Marostica · Tutti i diritti riservati</p>
+      <div class="footer-legal">
+        <a href="index.html" class="legal-link">Torna alla Home</a>
+        <button class="legal-link" id="openPrivacyBtn" type="button">Privacy & Note Legali</button>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="privacyModal" aria-hidden="true" role="dialog" aria-labelledby="privacyTitle">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="privacyTitle">Informativa Privacy & Note Legali</h3>
+        <button class="modal-close" id="closePrivacyBtn" aria-label="Chiudi informativa">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>1. Titolare del Trattamento</h4>
+        <p>
+          Il titolare del trattamento dei dati è <strong>Istanbul City Kebap Marostica</strong>, con sede in <strong>Via Monte Grappa 51, 36063 Marostica (VI)</strong>, Italia. Recapito telefonico: <a href="tel:+393932721320">+39 393 2721320</a>.
+        </p>
+
+        <h4>2. Tipologia di Dati e Cookie</h4>
+        <p>
+          Questo sito web ha finalità esclusivamente informative. <strong>Non vengono utilizzati cookie di profilazione</strong> né strumenti di tracciamento pubblicitario o analytics invasivi.
+        </p>
+        <p>
+          Eventuali dati forniti volontariamente tramite chiamata telefonica o messaggio WhatsApp vengono trattati unicamente al fine di evadere le richieste di prenotazione o asporto, nel pieno rispetto del Regolamento UE 2016/679 (GDPR).
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-sm btn-primary" id="confirmPrivacyBtn" type="button">Ho Capito</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js?v=2.2"></script>
+</body>
+</html>

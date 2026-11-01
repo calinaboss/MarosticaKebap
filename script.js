@@ -126,4 +126,62 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(triggerCurtainExit, 1600);
     }
   }
+
+  const dishPrevBtns = document.querySelectorAll('.arrow-dish-prev');
+  const dishNextBtns = document.querySelectorAll('.arrow-dish-next');
+
+  const getDishStep = (track) => {
+    const card = track.querySelector('.dish-card');
+    if (card) {
+      return card.offsetWidth + 20;
+    }
+    return 300;
+  };
+
+  dishPrevBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const track = document.getElementById(targetId);
+      if (track) {
+        track.scrollBy({ left: -getDishStep(track), behavior: 'smooth' });
+      }
+    });
+  });
+
+  dishNextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const track = document.getElementById(targetId);
+      if (track) {
+        track.scrollBy({ left: getDishStep(track), behavior: 'smooth' });
+      }
+    });
+  });
+
+  const menuTabs = document.querySelectorAll('.menu-tab-btn');
+  if (menuTabs.length > 0) {
+    const handleTabHighlight = () => {
+      const sections = ['pide', 'kebap', 'specialita', 'pizze', 'dolci'];
+      const scrollPos = window.scrollY + 140;
+
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPos >= top && scrollPos < top + height) {
+            menuTabs.forEach(t => {
+              if (t.getAttribute('href') === `#${id}`) {
+                t.classList.add('active');
+              } else {
+                t.classList.remove('active');
+              }
+            });
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleTabHighlight, { passive: true });
+  }
 });
