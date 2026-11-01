@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const getScrollStep = () => {
       const card = reviewsTrack.querySelector('.review-card');
       if (card) {
-        
         return card.offsetWidth + 20;
       }
       return 340;
@@ -116,15 +115,22 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           curtain.style.display = 'none';
         }, 900);
-      }, 700);
+      }, 500);
     };
 
     if (document.readyState === 'complete') {
       triggerCurtainExit();
     } else {
       window.addEventListener('load', triggerCurtainExit);
-      setTimeout(triggerCurtainExit, 1600);
+      setTimeout(triggerCurtainExit, 1200);
     }
+
+    curtain.addEventListener('click', () => {
+      curtain.classList.add('slide-left');
+      setTimeout(() => {
+        curtain.style.display = 'none';
+      }, 900);
+    });
   }
 
   const dishPrevBtns = document.querySelectorAll('.arrow-dish-prev');
@@ -157,12 +163,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-            });
-          }
-        }
-      });
-    };
 
-    window.addEventListener('scroll', handleTabHighlight, { passive: true });
-  }
 });
