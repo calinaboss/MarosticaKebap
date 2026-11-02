@@ -35,7 +35,313 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=2.6" />
+  <link rel="stylesheet" href="styles.css?v=3.2" />
+<style>
+.section-text-menu {
+  background: radial-gradient(ellipse at center, rgba(135, 25, 39, 0.25) 0%, rgba(58, 8, 15, 0.98) 100%);
+  padding: 80px 0 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.listino-quick-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.menu-accordions-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.menu-accordion {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.menu-accordion:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.menu-accordion[open] {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+summary.menu-accordion-summary {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 20px 24px;
+  cursor: pointer;
+  list-style: none !important;
+  list-style-type: none !important;
+  outline: none;
+  user-select: none;
+  gap: 16px;
+  -webkit-tap-highlight-color: transparent;
+}
+summary.menu-accordion-summary::-webkit-details-marker {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+summary.menu-accordion-summary::marker {
+  display: none !important;
+  content: "" !important;
+}
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.summary-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+.summary-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffb8c2;
+}
+.summary-icon {
+  width: 32px !important;
+  height: 32px !important;
+  min-width: 32px !important;
+  max-width: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #ffb8c2 !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  flex-shrink: 0 !important;
+}
+.summary-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  max-width: 20px !important;
+  display: block !important;
+}
+.menu-accordion[open] .summary-icon {
+  transform: rotate(180deg) !important;
+}
+.menu-accordion-content {
+  padding: 8px 24px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.accordion-cat-note {
+  font-size: 0.9rem;
+  color: #ffb8c2;
+  line-height: 1.5;
+  padding: 12px 16px;
+  background: rgba(135, 25, 39, 0.22);
+  border-radius: 10px;
+  border-left: 3px solid #ffb8c2;
+  margin-bottom: 18px;
+  margin-top: 8px;
+}
+.menu-items-list {
+  display: flex;
+  flex-direction: column;
+}
+.list-table-header {
+  display: grid;
+  grid-template-columns: 46px 1fr 180px;
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 6px;
+}
+.col-price-pair {
+  text-align: right;
+}
+.list-item-row {
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.2s ease;
+  border-radius: 8px;
+}
+.list-item-row:last-child {
+  border-bottom: none;
+}
+.list-item-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+.item-num {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #ffb8c2;
+  opacity: 0.9;
+}
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.item-name {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+}
+.item-desc {
+  font-size: 0.88rem;
+  color: #c9b0b4;
+  line-height: 1.45;
+  opacity: 0.9;
+}
+.item-price-single {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffb8c2;
+  white-space: nowrap;
+  padding: 5px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+}
+.pizza-row {
+  grid-template-columns: 46px 1fr 180px;
+}
+.item-prices-dual {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  align-items: center;
+  white-space: nowrap;
+}
+.price-pill {
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.price-pill small {
+  font-size: 0.68rem;
+  font-weight: 700;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+.price-pill.normal {
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+}
+.price-pill.big {
+  background: rgba(135, 25, 39, 0.45);
+  border: 1px solid rgba(255, 184, 194, 0.3);
+  color: #ffb8c2;
+}
+@media (max-width: 768px) {
+  .section-text-menu {
+    padding: 46px 0 36px;
+  }
+  summary.menu-accordion-summary {
+    padding: 16px 16px;
+    gap: 10px;
+  }
+  .summary-left {
+    gap: 8px;
+  }
+  .summary-title {
+    font-size: 1.02rem;
+  }
+  .summary-badge {
+    font-size: 0.66rem;
+    padding: 3px 8px;
+  }
+  .summary-icon {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+    max-width: 26px !important;
+  }
+  .summary-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    max-width: 18px !important;
+  }
+  .menu-accordion-content {
+    padding: 4px 12px 18px;
+  }
+  .accordion-cat-note {
+    font-size: 0.82rem;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+  .list-table-header {
+    display: none;
+  }
+  .list-item-row {
+    grid-template-columns: 30px 1fr;
+    gap: 6px 10px;
+    padding: 12px 6px;
+  }
+  .list-item-row .item-num {
+    grid-row: 1 / 3;
+    align-self: flex-start;
+    padding-top: 2px;
+  }
+  .list-item-row .item-info {
+    grid-column: 2 / 3;
+  }
+  .list-item-row .item-price-single {
+    grid-column: 2 / 3;
+    justify-self: flex-start;
+    margin-top: 4px;
+    font-size: 0.92rem;
+    padding: 3px 10px;
+  }
+  .pizza-row {
+    grid-template-columns: 30px 1fr;
+    gap: 6px 10px;
+    padding: 12px 6px;
+  }
+  .pizza-row .item-num {
+    grid-row: 1 / 3;
+    align-self: flex-start;
+    padding-top: 2px;
+  }
+  .pizza-row .item-info {
+    grid-column: 2 / 3;
+  }
+  .pizza-row .item-prices-dual {
+    grid-column: 2 / 3;
+    justify-content: flex-start;
+    margin-top: 6px;
+    gap: 6px;
+  }
+  .item-name {
+    font-size: 0.96rem;
+  }
+  .item-desc {
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+}
+</style>
 </head>
 <body class="menu-page">
 
@@ -532,7 +838,7 @@
               <span class="summary-badge">12 Menù Completi</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -645,7 +951,7 @@
               <span class="summary-badge">17 Specialità</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -798,7 +1104,7 @@
               <span class="summary-badge">6 Proposte</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -863,7 +1169,7 @@
               <span class="summary-badge">3 Specialità alla Griglia</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -904,7 +1210,7 @@
               <span class="summary-badge">7 Sfizi</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -977,7 +1283,7 @@
               <span class="summary-badge">2 Calzoni</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -1010,7 +1316,7 @@
               <span class="summary-badge">74 Pizze (Normale / Grande)</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -1846,7 +2152,7 @@
               <span class="summary-badge">2 Dolci</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -1879,7 +2185,7 @@
               <span class="summary-badge">Bibite e Birre</span>
             </div>
             <div class="summary-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;min-width:20px;max-width:20px;display:block;"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
           </summary>
           <div class="menu-accordion-content">
@@ -2024,6 +2330,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=2.6"></script>
+  <script src="script.js?v=3.2"></script>
 </body>
 </html>
