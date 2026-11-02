@@ -205,4 +205,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
+  const btnToggleAll = document.getElementById('btnToggleAll');
+  if (btnToggleAll) {
+    btnToggleAll.addEventListener('click', () => {
+      const accordions = document.querySelectorAll('.menu-accordion');
+      const anyOpen = Array.from(accordions).some(acc => acc.hasAttribute('open'));
+      accordions.forEach(acc => {
+        if (anyOpen) {
+          acc.removeAttribute('open');
+        } else {
+          acc.setAttribute('open', '');
+        }
+      });
+      btnToggleAll.textContent = anyOpen ? 'Espandi Tutto' : 'Riduci Tutto';
+    });
+  }
 });
